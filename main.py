@@ -1,6 +1,9 @@
-def main():
-    print("Hello from async-sse-gateway!")
+from fastapi import FastAPI
+
+app = FastAPI()
 
 
-if __name__ == "__main__":
-    main()
+@app.get("/")
+async def read_root():
+    return {"Hello": "World"}
+
