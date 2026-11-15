@@ -5,6 +5,14 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.14"
 dependencies = [
-    "asyncio>=4.0.0",
     "fastapi[standard]>=0.163.1",
 ]
+
+[dependency-groups]
+dev = [
+    "locust>=2.47.0",
+    "pytest>=9.2.0",
+]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
